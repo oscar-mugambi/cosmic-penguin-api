@@ -9,7 +9,13 @@
   "scripts": {
     "dev": "tsx src/server.ts",
     "build": "tsc",
-    "start": "NODE_ENV=production node dist/server.js"
+    "start": "NODE_ENV=production node dist/server.js",
+    "start:pm2": "pm2 start ecosystem.config.js",
+    "stop:pm2": "pm2 stop ecosystem.config.js",
+    "restart:pm2": "pm2 restart ecosystem.config.js",
+    "reload:pm2": "pm2 reload ecosystem.config.js",
+    "delete:pm2": "pm2 delete ecosystem.config.js",
+    "logs:pm2": "pm2 logs"
   },
   "dependencies": {
     "express": "^4.21.0",
